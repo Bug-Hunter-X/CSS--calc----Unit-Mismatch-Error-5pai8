@@ -1,0 +1,24 @@
+The corrected CSS code ensures consistent units within the `calc()` function:
+
+**Option 1: Using only percentages**
+```css
+.element {
+  width: calc(100% - 20px);
+  height: calc(50% - 10%); 
+}
+```
+
+**Option 2: Using only absolute units (e.g., pixels)**
+
+First, define a variable to make the calculation more readable and maintainable.
+```css
+:root {
+  --element-height: 200px;
+}
+.element {
+  width: calc(100% - 20px);
+  height: calc(var(--element-height) - 10px);
+}
+```
+
+Choose the option that best suits your layout needs.  The key is to avoid mixing percentage and absolute units within the same `calc()` expression.
