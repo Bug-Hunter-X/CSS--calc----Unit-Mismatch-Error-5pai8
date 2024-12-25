@@ -1,0 +1,10 @@
+The following CSS code snippet demonstrates an uncommon error related to the `calc()` function and unit mismatch:
+
+```css
+.element {
+  width: calc(100% - 20px);
+  height: calc(50% - 10em); /* Error: unit mismatch */
+}
+```
+
+The error lies in the `height` calculation.  `50%` is a percentage unit, while `10em` is an absolute unit.  `calc()` requires consistent units within a single calculation; mixing percentage and absolute units leads to unexpected behavior or parsing errors. 
